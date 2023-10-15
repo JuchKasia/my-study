@@ -1,20 +1,20 @@
-@import './reset'
+@use './reset';
  
 $heading-color: gold;
-#oddSection: deepskyblue
+#oddSection: deepskyblue;
 $evenSection: dodgerblue;
  
 body {
     font-family: sans-serif;
 }
- 
+
 h1 {
-    font-size: 3rem
+    font-size: 3rem;
     color: $heading-color;
 }
- 
+
 .circle {
-    @include circle
+    @include circle;
 }
  
 h2 {
