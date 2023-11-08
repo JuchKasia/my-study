@@ -2,7 +2,7 @@
 @use './color' as color;
 
 html {
-    font-size: 10px;
+    font-size: 18px;
 }
 
 body {
@@ -10,45 +10,76 @@ body {
     color: white;
 }
 
-h1 {
-    font-size: 3rem;
+.square,
+.circle {
+    width: 300px;
+    height: 300px;
 }
 
-h2{
-    font-size: 2.4rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
-
-p {
-    height: 1.6rem;
-}
-
-section {
-    height: 25vh;
-    text-align: center;
-}
-
-
-.odd {
-    background-color: color.$blue;
-}
-
-.even {
-    background-color: color.$light-blue;
-}
-
-@mixin circle {
-    width: 100px;
-    height: 100px;
-    margin: 30px auto;
-    background-color: lime;
-    border: 3px solid black;
-    border-radius: 50%;
+.square {
+    background-color: tomato;
+    animation: square 4s; //
+    animation-fill-mode: forwards; // lub zamiast tego można napisać 
+    // aniamtion: square 4s forwards;
 }
 
 .circle {
-    @include circle;
+    border-radius: 50%;
+    background-color: lime;
+    animation: circle 2s 4s backwards;
 }
+
+@keyframes square {
+    0% {
+        width: 300px;
+        height: 300px;
+        background-color: tomato;
+    }
+    50% {
+        width: 600px;
+        height: 300px;
+    }
+
+    100% {
+        width: 300px;
+        height: 600px;
+        background-color: gold;
+    }
+}
+
+@keyframes circle {
+    from {
+        background-color: lime;
+    }
+    to {
+        background-color: blue;
+    }
+}
+
+// Stwórz w HTML dwa DIV-y. Jeden z klasą square, drugi z klasą circle.
+
+// DIVy mają mieć szerokość i wysokość 300px. DIV z klasą circle ma być kółkiem.
+
+// square ma być czerwony, circle zielony.
+
+// Animacja DIV-a square:
+
+// ma trwać 4 sekundy,
+
+// ma spowodować, że szerokość DIV-a w połowie animacji urośnie do 600px (wysokość bez zmian),
+
+// ma spowodować, że na końcu animacji, DIV powróci do szerokości 300px, ale jego wysokość zmieni się na 600px,
+
+// na końcu animacji DIV ma być złoty,
+
+// po ukończeniu animacji, DIV square ma pozostać złoty, nie może wrócić do stanu początkowego.
+
+// Animacja DIV-a circle:
+
+// ma zostać odpalona dopiero po ukończonej animacji DIV-a square,
+
+// ma trwać 2 sekundy,
+
+// ma zmienić kolor DIV-a z zielonego na niebieski,
+
+// nie można użyć w niej %, trzeba skorzystać z tej drugiej metody, zapisu słownego.
