@@ -60,7 +60,7 @@ body {
     height: 70px;
     background-color: tomato;
     border-radius: 15%;
-    animation: car 8s linear infinite;
+    animation: car 8s ease-in infinite;
     .window {
         position: absolute;
         top: 5px;
@@ -85,6 +85,7 @@ body {
         background-color: black;
         border-radius: 50%;
         border: 2px dashed #999; // rubcy na kole
+        animation: wheel 2s linear infinite;
     }
     .front-wheel {
         left: 8px;
@@ -132,14 +133,6 @@ body {
     100% {
         top: 1000px;
     }
-    // from {
-    //     top: 100px;
-    //     // background-color: royalblue;
-    // }
-    // to {
-    //     top: 600px;
-    //     // background-color: darkblue;
-    // }
 }
 
 @keyframes sky {
@@ -155,34 +148,23 @@ body {
     100% {
         background-color: black;
     }
-    // from {
-    //     // top: 100px;
-    //     background-color: darkblue;
-    // }
-    // to {
-    //     // top: 600px;
-    //     background-color: royalblue;
-    // }
 }
 
 @keyframes car {
     from {
-        left: 200px;
-        // background-color: royalblue;
+        left: -300px;
     }
     to {
         left: 1950px;
-        // background-color: darkblue;
     }
 }
 
+// rotacja / kręcenie kół
 @keyframes wheel {
     from {
-        
-        // background-color: royalblue;
+        transform: rotate(0);
     }
     to {
-        left: 1950px;
-        // background-color: darkblue;
+        transform: rotate(360deg);
     }
 }

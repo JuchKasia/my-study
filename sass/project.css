@@ -57,7 +57,7 @@ body {
   height: 70px;
   background-color: tomato;
   border-radius: 15%;
-  animation: car 8s linear infinite;
+  animation: car 8s ease-in infinite;
 }
 .car .window {
   position: absolute;
@@ -82,6 +82,7 @@ body {
   background-color: black;
   border-radius: 50%;
   border: 2px dashed #999;
+  animation: wheel 2s linear infinite;
 }
 .car .front-wheel {
   left: 8px;
@@ -140,14 +141,17 @@ body {
 }
 @keyframes car {
   from {
-    left: 200px;
+    left: -300px;
   }
   to {
     left: 1950px;
   }
 }
 @keyframes wheel {
+  from {
+    transform: rotate(0);
+  }
   to {
-    left: 1950px;
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=project.css.map */
