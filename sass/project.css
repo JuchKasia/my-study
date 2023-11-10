@@ -11,55 +11,71 @@ body {
   background-color: #333;
 }
 
-.colors {
+.sky {
+  position: relative;
+  height: 60vh;
+  background-color: royalblue;
+}
+.sky .sun {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 90px;
+  height: 90px;
+  background-color: orange;
+  box-shadow: 0 0 70px yellow;
+  border-radius: 50px;
+}
+
+.ground {
+  position: relative;
   height: 40vh;
-  background-image: linear-gradient(80deg, tomato, tomato, gold, royalblue, gold, tomato, tomato);
-  background-size: 600%;
-  animation: colors 8s linear infinite;
+}
+.ground .grass {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-color: lime;
+}
+.ground .road {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  height: 120px;
+  background-color: gray;
 }
 
-@keyframes colors {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
+.car {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin-left: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: tomato;
 }
-.wrapper {
-  margin: 50px;
-  text-align: center;
-  line-height: 18px;
+.car .car-top {
+  position: relative;
+  width: 200px;
+  height: 45px;
 }
-
-.square {
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  background-color: #fff;
-  border-radius: 2px;
-  animation: fade 1.4s infinite;
+.car .car-top .window {
+  position: absolute;
+  top: 0px;
+  width: 60px;
+  height: 40px;
+  background-color: blue;
 }
-
-.square:nth-child(2n) {
-  animation: fade 1s infinite;
+.car .car-top .front-window {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  border-top-right-radius: 10px;
 }
-
-.square:nth-child(3n) {
-  animation: fade 0.5s infinite;
-}
-
-@keyframes fade {
-  10% {
-    opacity: 1;
-    background-color: #f600ff;
-  }
-  50% {
-    opacity: 0;
-    background-color: #006bff;
-  }
-  90% {
-    opacity: 1;
-    background-color: #f600ff;
-  }
+.car .car-top .rear-window {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  border-top-left-radius: 10px;
 }/*# sourceMappingURL=project.css.map */
