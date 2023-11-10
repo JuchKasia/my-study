@@ -51,42 +51,67 @@ body {
 
 
 .car {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    margin-left: 50px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    position: absolute;
+    top: -15px;
+    left: 200px;
+    width: 150px;
+    height: 70px;
     background-color: tomato;
-    // border: 1px solid green;
-    .car-top {
-        position: relative;
-        width: 200px;
-        height: 45px;
-        // border: 1px solid green;
-        .window {
-            position: absolute;
-            // position: relative;
-            top: 0px;
-            width: 60px;
-            height: 40px;
-            background-color: blue;
+    border-radius: 15%;
+    .window {
+        position: absolute;
+        top: 5px;
+        width: 50px;
+        height: 30px;
+        background-color: blue;
             // border: 1px solid black;
-        }
-        .front-window {
-            position: absolute;
-            top: 5px;
-            right: 0px;
-            border-top-right-radius: 10px;
-        }
-        .rear-window {
-            position: absolute;
-            top: 5px;
-            left: 0px;
-            border-top-left-radius: 10px;
-        }
     }
+    .front-window {
+        right: 0px;
+        border-top-right-radius: 10%;
+    }
+    .rear-window {
+        left: 0px;
+        border-top-left-radius: 10%;
+    }
+    .wheel {
+        position: absolute;
+        bottom: -20px;
+        width: 35px;
+        height: 35px;
+        background-color: black;
+        border-radius: 50%;
+        border: 2px dashed #999; // rubcy na kole
+    }
+    .front-wheel {
+        left: 8px;
+    }
+    .rear-wheel {
+        right: 8px;
+        z-index: 1;
+    }
+}
 
-    
-    
+// robimy pseudoelementy, żeby dolna część auta wystawała 
+// po szerokości i jeden kraj był zaokrąglony
+
+.car::before,
+.car::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 40px;
+    height: 35px;
+    background-color: tomato;
+    // border: 1px solid #fff;
+}
+
+.car::before {
+    left: -20px; 
+
+}
+
+.car::after {
+    right: -20px; //żeby dolna część auta wystawałą 
+    border-top-right-radius: 20%;
 }
