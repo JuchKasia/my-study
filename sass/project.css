@@ -9,13 +9,14 @@ body {
   font-size: 30px;
   color: #fff;
   background-color: #333;
+  overflow: hidden;
 }
 
 .sky {
   position: relative;
-  height: 60vh;
+  height: 80vh;
   background-color: royalblue;
-  animation: sky 3s 0.2s;
+  animation: sky 8s linear infinite;
 }
 .sky .sun {
   position: absolute;
@@ -26,12 +27,12 @@ body {
   background-color: orange;
   box-shadow: 0 0 70px yellow;
   border-radius: 50px;
-  animation: sun 3s 0.2s;
+  animation: sun 8s linear infinite;
 }
 
 .ground {
   position: relative;
-  height: 40vh;
+  height: 20vh;
 }
 .ground .grass {
   position: absolute;
@@ -56,6 +57,7 @@ body {
   height: 70px;
   background-color: tomato;
   border-radius: 15%;
+  animation: car 8s linear infinite;
 }
 .car .window {
   position: absolute;
@@ -109,18 +111,43 @@ body {
 }
 
 @keyframes sun {
-  from {
+  0% {
+    top: 1000px;
+  }
+  40% {
     top: 100px;
   }
-  to {
-    top: 600px;
+  60% {
+    top: 100px;
+  }
+  100% {
+    top: 1000px;
   }
 }
 @keyframes sky {
-  from {
+  0% {
+    background-color: black;
+  }
+  40% {
     background-color: royalblue;
   }
+  60% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@keyframes car {
+  from {
+    left: 200px;
+  }
   to {
-    background-color: darkblue;
+    left: 1950px;
+  }
+}
+@keyframes wheel {
+  to {
+    left: 1950px;
   }
 }/*# sourceMappingURL=project.css.map */

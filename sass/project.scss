@@ -9,13 +9,14 @@ body {
     font-size: 30px;
     color: #fff;
     background-color: #333;
+    overflow: hidden;
 }
 
 .sky {
     position: relative;
-    height: 60vh;
+    height: 80vh;
     background-color: royalblue;
-    animation: sky 3s 0.2s;
+    animation: sky 8s linear infinite; // linear - animacja będzie płynna
     .sun {
         position: absolute;
         top: 100px;
@@ -26,13 +27,13 @@ body {
         background-color: orange;
         box-shadow: 0 0 70px yellow; //70px rozmycia
         border-radius: 50px;
-        animation: sun 3s 0.2s;
+        animation: sun 8s linear infinite;
     }
 }
 
 .ground {
     position: relative;
-    height: 40vh;
+    height: 20vh;
     .grass {
         position: absolute;
         top: 0;
@@ -59,6 +60,7 @@ body {
     height: 70px;
     background-color: tomato;
     border-radius: 15%;
+    animation: car 8s linear infinite;
     .window {
         position: absolute;
         top: 5px;
@@ -118,23 +120,69 @@ body {
 }
 
 @keyframes sun {
-    from {
+    0% {
+        top: 1000px;
+    }
+    40% {
         top: 100px;
+    }
+    60% {
+        top: 100px;
+    }
+    100% {
+        top: 1000px;
+    }
+    // from {
+    //     top: 100px;
+    //     // background-color: royalblue;
+    // }
+    // to {
+    //     top: 600px;
+    //     // background-color: darkblue;
+    // }
+}
+
+@keyframes sky {
+    0% {
+        background-color: black;
+    }
+    40% {
+        background-color: royalblue;
+    }
+    60% {
+        background-color: royalblue;
+    }
+    100% {
+        background-color: black;
+    }
+    // from {
+    //     // top: 100px;
+    //     background-color: darkblue;
+    // }
+    // to {
+    //     // top: 600px;
+    //     background-color: royalblue;
+    // }
+}
+
+@keyframes car {
+    from {
+        left: 200px;
         // background-color: royalblue;
     }
     to {
-        top: 600px;
+        left: 1950px;
         // background-color: darkblue;
     }
 }
 
-@keyframes sky {
+@keyframes wheel {
     from {
-        // top: 100px;
-        background-color: royalblue;
+        
+        // background-color: royalblue;
     }
     to {
-        // top: 600px;
-        background-color: darkblue;
+        left: 1950px;
+        // background-color: darkblue;
     }
 }
