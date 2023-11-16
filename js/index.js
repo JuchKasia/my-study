@@ -1,21 +1,35 @@
-const arrowSvg = document.querySelector('.fas');
-const btn = document.querySelector('.arrow');
-const item1 = document.querySelector('.item1');
+const sizeUp = document.querySelector('.size-up');
+const sizeDown = document.querySelector('.size-down');
+const color = document.querySelector('.color');
+const textContent = document.querySelector('.text-content');
 
-function showImg() {
-    item1.classList.toggle('show');
-    if (item1.classList.contains('show')) {
-        arrowSvg.style.transform = 'rotate(180deg)';
-        // arrowSvg.style.rotate = '180deg';  2 sposób
+let fontSize = 20;  //wartość domyślna
 
-        // item1.classList.toggle('show');
-    } else {
-        arrowSvg.style.transform = 'rotate(360deg)'
-        // arrowSvg.style.rotate = '0deg';  2 sposób
-    }
+function bigText() {
+    // najpierw zwiększamy naszą wartość font-size, a potem ją przepisujemy
+
+    // fontSize++; //za każdym klikiem przycisku '+' zwiększa się font-size tekstu o 1 px 
+                // przy każdym kliknięciu
+                // x = x + y;
+                // x += y;
+    // fontSize = fontSize + 5; //krok zwiększenia rozmiaru teksta piszemy 5px;
+    // lub to samo piszemy  następnie w skrócie
+     fontSize += 5; 
+
+// textContent.style.fontSize = '50px'; // font-size zwiękrzamy
+    textContent.style.fontSize = fontSize + 'px';
+} 
+
+function smallText() {
+    fontSize -= 5; 
+    textContent.style.fontSize = fontSize + 'px';
 }
 
 
-btn.addEventListener('click', showImg);
+function changeColor() {
+    textContent.style.color = 'gold';
+}
 
-
+sizeUp.addEventListener('click', bigText); // klikamy na przcisk - tekst się zwiększa
+sizeDown.addEventListener('click', smallText); // klikamy na przcisk - tekst się zwiększa
+color.addEventListener('click', changeColor);
