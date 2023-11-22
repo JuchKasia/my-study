@@ -90,11 +90,6 @@ body {
   background-color: #ddd;
 }
 
-@media (min-width: 1200px) {
-  .hero-img {
-    background-image: url("../assets/img/main-lamborgini1920.jpg");
-  }
-}
 .btn-outline-light {
   margin-top: 2px;
   text-transform: uppercase;
@@ -107,4 +102,18 @@ body {
   bottom: 20px;
   font-size: 30px;
   color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .hero-img {
+    background-image: url("../assets/img/main-lamborgini1920.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .hero-text .text-title {
+    font-size: 42px;
+  }
+  .hero-text .text-subtitle {
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */
