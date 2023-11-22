@@ -94,4 +94,17 @@ body {
   .hero-img {
     background-image: url("../assets/img/main-lamborgini1920.jpg");
   }
+}
+.btn-outline-light {
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.fa-chevron-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  font-size: 30px;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

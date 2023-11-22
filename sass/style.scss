@@ -113,3 +113,21 @@ body {
         background-image: url('../assets/img/main-lamborgini1920.jpg');
     }
 }
+
+.btn-outline-light {
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.btn-chevron-down {
+    // list-style: none;
+    // text-decoration: none;
+}
+.fa-chevron-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); // wyśrodkowanie
+    bottom: 20px;
+    font-size: 30px;
+    color: color.$white;
+}
