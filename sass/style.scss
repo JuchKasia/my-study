@@ -14,6 +14,15 @@ body {
     background-color: #333;
 }
 
+
+// NAVIGATION
+.navbar {
+    width: 100%;
+    height: 100px;
+    z-index: 5;
+    // border: 2px solid red;
+}
+
 .navbar-nav {
     .nav-link {
         text-transform: uppercase;
@@ -24,6 +33,10 @@ body {
     .nav-link.active {
         color: color.$main-color;
     }
+}
+
+.navbar-toggler {
+    padding: 10px 15px;
 }
 
 .navbar-toggler:focus {
@@ -42,11 +55,46 @@ body {
 // LOGO
 .navbar-brand {
     width: 110px;
-    height: 90px;
+    height: 100px;
     align-items: center;
     .logo-img {
         width: 110px;
-        height: 90px;
+        height: 100px;
+    }
+}
+
+
+// HEADER
+.hero-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: color.$white;
+    background-image: url('../assets/img/main-lamborgini1920.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; // zdjęcie niby jest przyklejone na stronie. Na ois nie zawsze działa
+    z-index: 0;
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; //tekst wyśrodkowaał się na swoj a wysokość
+                             // trzeba dać ćwysokośc 100% swojego rodzica
+        height: 100%;
+        .text-title {
+            text-transform: uppercase;
+        }
+    }
+    
+    .hero-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.7); // cień
+        z-index: -1;
     }
 }
 
