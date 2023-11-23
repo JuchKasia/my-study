@@ -10,10 +10,23 @@ body {
   background-color: #333;
 }
 
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .navbar {
   width: 100%;
-  height: 100px;
   z-index: 5;
+  transition: 0.3s;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.fa-bars {
+  color: #fff;
 }
 
 .navbar-nav .nav-link {
@@ -32,15 +45,6 @@ body {
 
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0;
-}
-
-.navbar-brand {
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.fa-bars {
-  color: #fff;
 }
 
 .navbar-brand {

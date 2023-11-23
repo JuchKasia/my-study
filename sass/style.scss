@@ -14,13 +14,26 @@ body {
     background-color: #333;
 }
 
+.shadow-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+} 
+
 
 // NAVIGATION
 .navbar {
     width: 100%;
-    height: 100px;
     z-index: 5;
+    transition: .3s;
     // border: 2px solid red;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    color: color.$white;
+}
+
+.fa-bars {
+    color: color.$white;
 }
 
 .navbar-nav {
@@ -43,14 +56,6 @@ body {
     box-shadow: 0 0 0 0;
 }
 
-.navbar-brand {
-    text-transform: uppercase;
-    color: color.$white;
-}
-
-.fa-bars {
-    color: color.$white;
-}
 
 // LOGO
 .navbar-brand {
