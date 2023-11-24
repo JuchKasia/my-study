@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 116px;
+}
+
 body {
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -14,10 +18,24 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.section-title {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 80px;
+  height: 4px;
+  background-color: #d09f46;
+}
+
 .navbar {
   width: 100%;
   z-index: 5;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .navbar-brand {
@@ -36,7 +54,7 @@ body {
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #09f;
+  color: #d09f46;
 }
 
 .navbar-toggler {
@@ -88,17 +106,6 @@ body {
   z-index: -1;
 }
 
-.about-us {
-  width: 100%;
-  height: 30vh;
-  background-color: #ddd;
-}
-
-.btn-outline-light {
-  margin-top: 2px;
-  text-transform: uppercase;
-}
-
 .fa-chevron-down {
   position: absolute;
   left: 50%;
@@ -106,6 +113,35 @@ body {
   bottom: 20px;
   font-size: 30px;
   color: #fff;
+}
+
+.btn-outline-light {
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.about-us {
+  width: 100%;
+  height: 400px;
+  padding: 40px;
+  color: #333;
+}
+.about-us i {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.about-us .about-us-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.about-us .about-us-card-text {
+  font-size: 14px;
+}
+.about-us .about-us-hover {
+  transition: 0.5s;
+}
+.about-us .about-us-hover:hover {
+  color: #d09f46;
 }
 
 @media (min-width: 1200px) {
