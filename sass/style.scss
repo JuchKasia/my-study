@@ -144,24 +144,23 @@ section {
 
 
 // MAIN 
-.about-us-card-title,
-.portfolio-card-title {
+.about-us-card-title {
         font-size: 18px;
         text-transform: uppercase;
 }
 
 .about-us-card-text,
-.portfolio-card-text {
+.services-card-text {
     font-size: 14px;
 }
 
 .about-us-hover,
-.portfolio-hover {
+.services-hover {
     transition: 0.5s;
 }
 
 .about-us-hover:hover,
-.portfolio-hover:hover {
+.services-hover:hover {
     color: color.$main-color;
 }
 
@@ -171,7 +170,7 @@ i {
 }
 
 // section ABOUT US
-.about-us {
+.section-about-us {
     color: color.$gray;
     // border: 1px solid red;
     
@@ -179,7 +178,7 @@ i {
 
 
 // section PORTFOLIO
-.portfolio {
+.section-services {
     position: relative;
     color: color.$white;
     background-image: url('../assets/img/car-broken640.jpg');
@@ -187,7 +186,7 @@ i {
     background-position: center;
     z-index: 0;
     // border: 2px solid red;
-    .portfolio-shadow {
+    .services-shadow {
         position: absolute;
         top: 0;
         left: 0;
@@ -200,14 +199,33 @@ i {
     
 }
 
-.portfolio-hover {
-    margin-top: 10px;
-    margin-bottom: 50px;
+.services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
-.portfolio .fa-briefcase {
-    margin-top: 10px;
-    font-size: 30px;
+.services-hover {
+    // height: ;
+    // margin: 10px;
+    width: 200px;
+    border: 2px solid red;
+    .services-card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    i {
+        font-size: 36px;
+    }
+    .services-card-text {
+        // width: 200px;
+        // width: 100%;
+        height: 100px;
+        border: 2px solid blue;
+    }
 }
+
 
 
 
@@ -216,11 +234,12 @@ i {
     .hero-img {
         background-image: url('../assets/img/main-lamborgini1920.jpg');
     }
-    .portfolio {
-        background-image: url('../assets/img/car-broken1920.jpg');
-        }
 }
 
 
-
+@media (min-width: 992px) {
+    .section-services {
+        background-image: url('../assets/img/car-broken1920.jpg');
+    }
+}
 

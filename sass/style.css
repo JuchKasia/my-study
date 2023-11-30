@@ -128,24 +128,23 @@ section {
   text-transform: uppercase;
 }
 
-.about-us-card-title,
-.portfolio-card-title {
+.about-us-card-title {
   font-size: 18px;
   text-transform: uppercase;
 }
 
 .about-us-card-text,
-.portfolio-card-text {
+.services-card-text {
   font-size: 14px;
 }
 
 .about-us-hover,
-.portfolio-hover {
+.services-hover {
   transition: 0.5s;
 }
 
 .about-us-hover:hover,
-.portfolio-hover:hover {
+.services-hover:hover {
   color: #d09f46;
 }
 
@@ -154,11 +153,11 @@ i {
   font-size: 30px;
 }
 
-.about-us {
+.section-about-us {
   color: #333;
 }
 
-.portfolio {
+.section-services {
   position: relative;
   color: #fff;
   background-image: url("../assets/img/car-broken640.jpg");
@@ -166,7 +165,7 @@ i {
   background-position: center;
   z-index: 0;
 }
-.portfolio .portfolio-shadow {
+.section-services .services-shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -176,21 +175,37 @@ i {
   z-index: -1;
 }
 
-.portfolio-hover {
-  margin-top: 10px;
-  margin-bottom: 50px;
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
-.portfolio .fa-briefcase {
-  margin-top: 10px;
-  font-size: 30px;
+.services-hover {
+  width: 200px;
+  border: 2px solid red;
+}
+.services-hover .services-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.services-hover i {
+  font-size: 36px;
+}
+.services-hover .services-card-text {
+  height: 100px;
+  border: 2px solid blue;
 }
 
 @media (min-width: 1200px) {
   .hero-img {
     background-image: url("../assets/img/main-lamborgini1920.jpg");
   }
-  .portfolio {
+}
+@media (min-width: 992px) {
+  .section-services {
     background-image: url("../assets/img/car-broken1920.jpg");
   }
 }/*# sourceMappingURL=style.css.map */
