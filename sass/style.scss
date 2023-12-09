@@ -19,7 +19,7 @@ body {
     margin: 0 auto;
     color: color.$white;
     font-family: 'Montserrat', sans-serif;
-    background-color: #333;
+    background-color: color.$bg-color;
 }
 
 .shadow-bg {
@@ -241,6 +241,24 @@ i {
 
 }
 
+
+// section PRICES
+.section-prices {
+    color: color.$gray;
+}
+
+.price-wrap {
+    // display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+    // text-align: center;
+    .price-box {
+        margin-top: 20px;
+        // border: 2px solid blue;
+    }
+
+}
 
 @media (min-width: 1200px) {
     // HEADER
