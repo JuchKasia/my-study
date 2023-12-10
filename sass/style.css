@@ -244,6 +244,20 @@ i {
   text-decoration: none;
 }
 
+.section-team {
+  color: #333;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fab {
+  font-size: 20px;
+}
+
 @media (min-width: 1200px) {
   .hero-img {
     background-image: url("../assets/img/main-lamborgini1920.jpg");

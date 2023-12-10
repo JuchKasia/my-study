@@ -275,6 +275,32 @@ i {
 
 }
 
+// section TEAM
+.section-team {
+    color: color.$gray;
+}
+
+.card-team {
+    // width: 450px;
+    // border: 1px solid red;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fab {
+    font-size: 20px;
+} 
+// .card-group {
+//     .card {
+//         width: 200px;
+//         // margin: 0 20px;
+//     }
+
+// }
+
 
 
 @media (min-width: 1200px) {
