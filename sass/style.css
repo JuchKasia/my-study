@@ -222,7 +222,26 @@ i {
   justify-content: center;
 }
 .price-wrap .price-box {
-  margin-top: 20px;
+  margin: 20px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.price-wrap .price-box .price-title {
+  color: #d09f46;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.price-wrap .price-box:hover {
+  transform: scale(1.05);
+}
+.price-wrap .price-info {
+  margin-top: 30px;
+}
+.price-wrap .price-info a {
+  text-decoration: none;
 }
 
 @media (min-width: 1200px) {

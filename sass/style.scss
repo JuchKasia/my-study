@@ -254,11 +254,37 @@ i {
     // align-items: center;
     // text-align: center;
     .price-box {
-        margin-top: 20px;
+        margin: 20px;
+        padding: 30px;
+        background: color.$white;
+        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.4);
+        transition: transform 0.3s;
+        cursor: pointer;
         // border: 2px solid blue;
+        .price-title {
+            color: color.$main-color;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    .price-box:hover {
+        transform: scale(1.05);
+    }
+    .price-info {
+        margin-top: 30px;
+        a {
+            text-decoration: none;
+        }
     }
 
 }
+
+
+// @keyframes priceBox {
+//     // transform: scale(2);
+//     border: 1px solied red;
+// }
+
 
 @media (min-width: 1200px) {
     // HEADER
