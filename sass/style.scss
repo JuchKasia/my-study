@@ -248,11 +248,7 @@ i {
 }
 
 .price-wrap {
-    // display: flex;
-    // flex-wrap: wrap;
     justify-content: center;
-    // align-items: center;
-    // text-align: center;
     .price-box {
         margin: 20px;
         padding: 30px;
@@ -279,11 +275,6 @@ i {
 
 }
 
-
-// @keyframes priceBox {
-//     // transform: scale(2);
-//     border: 1px solied red;
-// }
 
 
 @media (min-width: 1200px) {
