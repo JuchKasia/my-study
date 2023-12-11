@@ -255,7 +255,7 @@ i {
         background: color.$white;
         box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.4);
         transition: transform 0.3s;
-        cursor: pointer;
+        // cursor: pointer;
         // border: 2px solid blue;
         .price-title {
             color: color.$main-color;
@@ -277,12 +277,53 @@ i {
 
 // section TEAM
 .section-team {
-    color: color.$gray;
+    position: relative;
+    color: color.$white;
+    background-image: url('../assets/img/macro-wheel_640.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    .team-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // height: auto;
+        background-color: rgb(0, 0, 0, 0.8); // cień
+        background-attachment: fixed;
+        z-index: -1;
+    }
 }
 
+// .card-team {
+//     // border-radius: 20px;
+//     // height: 300px;
+//     // width: 450px;
+//     // border: 1px solid red;
+//     // .card-img-top,
+//     .card-body,
+//     .card-footer   {
+//         // border-radius: 20px;
+//         // height: 300px;
+//     }
+// }
+
 .card-team {
-    // width: 450px;
-    // border: 1px solid red;
+    transition: transform 0.3s;
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+    }
+    .card-title {
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.card-team:hover {
+    transform: scale(1.05);
 }
 
 .card-footer {
@@ -293,13 +334,7 @@ i {
 .fab {
     font-size: 20px;
 } 
-// .card-group {
-//     .card {
-//         width: 200px;
-//         // margin: 0 20px;
-//     }
 
-// }
 
 
 
