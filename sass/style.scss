@@ -296,29 +296,27 @@ i {
     }
 }
 
-// .card-team {
-//     // border-radius: 20px;
-//     // height: 300px;
-//     // width: 450px;
-//     // border: 1px solid red;
-//     // .card-img-top,
-//     .card-body,
-//     .card-footer   {
-//         // border-radius: 20px;
-//         // height: 300px;
-//     }
-// }
+.team-wrap {
+    justify-content: center;
+}
 
-.card-team {
+.team-cards {
+    width: 220px;
+}
+.card {
     transition: transform 0.3s;
     .card-img-top {
         height: 300px;
         object-fit: cover;
     }
-    .card-title {
+    .card-body {
+        margin-bottom: 20px;
+        height: 190px;
+        .card-title {
         margin-bottom: 20px;
         text-align: center;
         text-transform: uppercase;
+        }
     }
 }
 

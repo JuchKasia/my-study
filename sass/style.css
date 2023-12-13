@@ -262,15 +262,27 @@ i {
   z-index: -1;
 }
 
-.card-team {
+.team-wrap {
+  justify-content: center;
+}
+
+.team-cards {
+  width: 220px;
+}
+
+.card {
   transition: transform 0.3s;
 }
-.card-team .card-img-top {
+.card .card-img-top {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-team .card-title {
+.card .card-body {
+  margin-bottom: 20px;
+  height: 190px;
+}
+.card .card-body .card-title {
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
