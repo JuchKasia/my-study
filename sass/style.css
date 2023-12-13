@@ -270,19 +270,19 @@ i {
   width: 280px;
 }
 
-.card {
+.team-box {
   transition: transform 0.3s;
 }
-.card .card-img-top {
+.team-box .card-img-top {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card .card-body {
+.team-box .card-body {
   margin-bottom: 20px;
   height: 190px;
 }
-.card .card-body .card-title {
+.team-box .card-body .card-title {
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -319,5 +319,10 @@ i {
   .container-team {
     min-width: 570px;
     width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .team-box .card-img-top {
+    height: 200px;
   }
 }/*# sourceMappingURL=style.css.map */

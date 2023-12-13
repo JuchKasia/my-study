@@ -304,7 +304,7 @@ i {
     width: 280px;
 }
 
-.card {
+.team-box {
     transition: transform 0.3s;
     .card-img-top {
         height: 300px;
@@ -360,5 +360,11 @@ i {
     .container-team {
         min-width: 570px;
         width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-box .card-img-top {
+            height: 200px;
     }
 }
