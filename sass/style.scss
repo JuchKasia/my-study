@@ -335,7 +335,28 @@ i {
 } 
 
 
+// section
+.section-achievements {
+    background-color: color.$light-gray;
+    color: color.$gray;
+    // height: 200px;
+}
 
+.achievements-wrap {
+    padding: 20px 0;
+    i {
+        margin-bottom: 20px;
+        font-size: 48px;
+        text-shadow: 0 0 5px #000;
+    }
+    .achievement-number {
+        font-style: 22px;
+    }
+    .achievement-text {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
 
 @media (min-width: 1200px) {
     // HEADER

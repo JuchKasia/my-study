@@ -302,6 +302,27 @@ i {
   font-size: 20px;
 }
 
+.section-achievements {
+  background-color: #ddd;
+  color: #333;
+}
+
+.achievements-wrap {
+  padding: 20px 0;
+}
+.achievements-wrap i {
+  margin-bottom: 20px;
+  font-size: 48px;
+  text-shadow: 0 0 5px #000;
+}
+.achievements-wrap .achievement-number {
+  font-style: 22px;
+}
+.achievements-wrap .achievement-text {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 @media (min-width: 1200px) {
   .hero-img {
     background-image: url("../assets/img/main-lamborgini1920.jpg");
