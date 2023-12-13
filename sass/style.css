@@ -267,7 +267,7 @@ i {
 }
 
 .team-cards {
-  width: 220px;
+  width: 280px;
 }
 
 .card {
@@ -306,9 +306,18 @@ i {
   .hero-img {
     background-image: url("../assets/img/main-lamborgini1920.jpg");
   }
+  .team-cards {
+    width: 220px;
+  }
 }
 @media (min-width: 992px) {
   .section-services {
     background-image: url("../assets/img/car-broken1920.jpg");
+  }
+}
+@media (min-width: 576px) {
+  .container-team {
+    min-width: 570px;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

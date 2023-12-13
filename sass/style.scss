@@ -301,8 +301,9 @@ i {
 }
 
 .team-cards {
-    width: 220px;
+    width: 280px;
 }
+
 .card {
     transition: transform 0.3s;
     .card-img-top {
@@ -341,6 +342,11 @@ i {
     .hero-img {
         background-image: url('../assets/img/main-lamborgini1920.jpg');
     }
+
+    // TEAM
+    .team-cards {
+        width: 220px;
+    }
 }
 
 
@@ -350,3 +356,9 @@ i {
     }
 }
 
+@media (min-width: 576px) {
+    .container-team {
+        min-width: 570px;
+        width: 100%;
+    }
+}
