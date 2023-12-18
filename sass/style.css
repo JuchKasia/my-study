@@ -323,6 +323,144 @@ i {
   text-transform: uppercase;
 }
 
+.footer {
+  background-color: #333;
+  color: #ebecf2;
+}
+.footer i {
+  color: #ebecf2;
+  padding-top: 5px;
+  margin: 0;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+}
+.footer .contact-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .contact-wrapper .contacts-content {
+  display: flex;
+  flex-direction: column;
+  color: #ebecf2;
+}
+.footer .contact-wrapper .contacts-content .contact-subtitle {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer .contact-wrapper .contacts-content .location-box {
+  width: 280px;
+}
+.footer .contact-wrapper .contacts-content .location-box .location-item {
+  display: flex;
+}
+.footer .contact-wrapper .contacts-content .location-box .location-item .map {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ebecf2;
+  list-style: none;
+  text-decoration: none;
+  gap: 20px;
+  transition: 0.5s;
+}
+.footer .contact-wrapper .contacts-content .location-box .location-item .map:hover {
+  color: #d09f46;
+}
+.footer .contact-wrapper .contacts-content .location-box .location-item .location-title {
+  margin-bottom: 0;
+}
+.footer .contact-wrapper .contacts-content .contacts-box {
+  width: 280px;
+}
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item {
+  display: flex;
+}
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item .email,
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item .phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  color: #ebecf2;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item .email:hover,
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item .phone:hover {
+  color: #d09f46;
+}
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item .email-title,
+.footer .contact-wrapper .contacts-content .contacts-box .contacts-item .phone-title {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.footer .contact-wrapper .info-content {
+  display: flex;
+  flex-direction: column;
+  color: #ebecf2;
+}
+.footer .contact-wrapper .info-content .info-subtitle {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer .contact-wrapper .info-content .info-box {
+  width: 220px;
+  padding-top: 5px;
+}
+.footer .contact-wrapper .info-content .info-box .info-item {
+  display: flex;
+}
+.footer .contact-wrapper .info-content .info-box .info-item .info-container {
+  margin: 0 auto;
+  padding-left: 10px;
+  color: #ebecf2;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer .contact-wrapper .info-content .info-box .info-item .info-container .info-name {
+  margin: 0;
+}
+.footer .contact-wrapper .info-content .info-box .info-item .info-container:hover {
+  color: #d09f46;
+}
+.footer .contact-wrapper .social-content {
+  display: flex;
+  flex-direction: column;
+  color: #ebecf2;
+}
+.footer .contact-wrapper .social-content .social-box {
+  padding-top: 10px;
+  width: 280px;
+}
+.footer .contact-wrapper .social-content .social-box .social-item .social-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  color: #ebecf2;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer .contact-wrapper .social-content .social-box .social-item .social-container i {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.footer .contact-wrapper .social-content .social-box .social-item .social-container .social-name {
+  margin: 0;
+  font-size: 16px;
+}
+.footer .contact-wrapper .social-content .social-box .social-item .social-container:hover {
+  color: #d09f46;
+}
+
 @media (min-width: 1200px) {
   .hero-img {
     background-image: url("../assets/img/main-lamborgini1920.jpg");

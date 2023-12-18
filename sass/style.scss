@@ -339,7 +339,6 @@ i {
 .section-achievements {
     background-color: color.$light-gray;
     color: color.$gray;
-    // height: 200px;
 }
 
 .achievements-wrap {
@@ -357,6 +356,160 @@ i {
         text-transform: uppercase;
     }
 }
+
+
+// section CONTACT
+.footer {
+    background-color: color.$gray;
+    color: color.$bg-color;
+    i {
+        color: color.$bg-color;
+        padding-top: 5px;
+        margin: 0;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        // text-shadow: 0 0 5px #000;
+        // border: 2px solid red;
+    }
+    .contact-wrapper {
+        display: flex;
+        justify-content: space-around;
+        .contacts-content {
+            display: flex;
+            flex-direction: column;
+            color: color.$bg-color;
+            // border: 2px solid red;
+            .contact-subtitle {
+                margin: 0 auto;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                // border: 2px solid red;
+            }
+            .location-box {
+                width: 280px;
+                // border: 2px solid green;
+                .location-item {
+                    display: flex;
+                    .map {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        gap: 20px;
+                        transition: 0.5s;
+                    }
+                    .map:hover {
+                        color: color.$main-color;
+                    }
+                    .location-title {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .contacts-box {
+                width: 280px;
+                // border: 2px solid green;
+                .contacts-item {
+                    display: flex;
+                    .email,
+                    .phone {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 20px;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        transition: 0.5s;
+                    }
+                    .email:hover,
+                    .phone:hover {
+                        color: color.$main-color;
+                    }
+                    .email-title,
+                    .phone-title {
+                        margin-bottom: 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .info-content {
+            display: flex;
+            flex-direction: column;
+            color: color.$bg-color;
+            // border: 2px solid red;
+            .info-subtitle {
+                margin: 0 auto;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                // border: 2px solid red;
+            }
+            .info-box {
+                width: 220px;
+                padding-top: 5px;
+                .info-item {
+                    display: flex;
+                    // align-self: center;
+                    .info-container {
+                        margin: 0 auto;
+                        padding-left: 10px;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        transition: 0.5s;
+                        .info-name {
+                            margin: 0;
+                        }
+                    }
+                    .info-container:hover {
+                        color: color.$main-color;
+                    }
+                }
+            }
+        }
+        .social-content {
+            display: flex;
+            flex-direction: column;
+            color: color.$bg-color;
+            // border: 2px solid red;
+            .social-box {
+                padding-top: 10px;
+                width: 280px;
+                .social-item {
+                    // border: 2px solid red;
+                    .social-container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 20px;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        transition: 0.5s;
+                        i {
+                            margin-bottom: 0;
+                            font-size: 16px;
+                        }
+                        .social-name {
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                    }
+                    .social-container:hover {
+                        color: color.$main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @media (min-width: 1200px) {
     // HEADER
