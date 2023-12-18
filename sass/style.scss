@@ -360,8 +360,25 @@ i {
 
 // section CONTACT
 .footer {
-    background-color: color.$gray;
+    position: relative;
+    background-image: url('../assets/img/city/warsaw-640.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
     color: color.$bg-color;
+    z-index: 0;
+    .footer-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background-color: rgb(0, 0, 0, 0.7);
+        background-color: rgb(0, 9, 27, 0.7);
+        background-attachment: fixed;
+        z-index: -1;
+
+    }
     i {
         color: color.$bg-color;
         padding-top: 5px;
@@ -374,6 +391,7 @@ i {
     }
     .contact-wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         .contacts-content {
             display: flex;
@@ -383,6 +401,7 @@ i {
             .contact-subtitle {
                 margin: 0 auto;
                 font-size: 18px;
+                letter-spacing: 2px;
                 font-weight: bold;
                 text-transform: uppercase;
                 // border: 2px solid red;
@@ -397,10 +416,11 @@ i {
                         flex-direction: row;
                         align-items: center;
                         color: color.$bg-color;
+                        // color: color.$white;
                         list-style: none;
                         text-decoration: none;
                         gap: 20px;
-                        transition: 0.5s;
+                        transition: color 0.5s;
                     }
                     .map:hover {
                         color: color.$main-color;
@@ -424,7 +444,7 @@ i {
                         color: color.$bg-color;
                         list-style: none;
                         text-decoration: none;
-                        transition: 0.5s;
+                        transition: color 0.5s;
                     }
                     .email:hover,
                     .phone:hover {
@@ -446,6 +466,7 @@ i {
             .info-subtitle {
                 margin: 0 auto;
                 font-size: 18px;
+                letter-spacing: 2px;
                 font-weight: bold;
                 text-transform: uppercase;
                 // border: 2px solid red;
@@ -462,7 +483,7 @@ i {
                         color: color.$bg-color;
                         list-style: none;
                         text-decoration: none;
-                        transition: 0.5s;
+                        transition: color 0.5s;
                         .info-name {
                             margin: 0;
                         }
@@ -486,12 +507,13 @@ i {
                     .social-container {
                         display: flex;
                         flex-direction: row;
+                        justify-content: center;
                         align-items: center;
                         gap: 20px;
                         color: color.$bg-color;
                         list-style: none;
                         text-decoration: none;
-                        transition: 0.5s;
+                        transition: color 0.5s;
                         i {
                             margin-bottom: 0;
                             font-size: 16px;
