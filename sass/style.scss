@@ -1,0 +1,566 @@
+// @use './reset';
+@use './color' as color;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 116px; //piszemy gdzie chcemy,żeby padding zatrzymał
+    // = wysokość nawigacji. Przy przewijaniu strony title sekcji nie 
+    // będzie się chował pod nav
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    color: color.$white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: color.$bg-color;
+}
+
+.shadow-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+} 
+
+section {
+    padding: 40px 0;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-title {
+    text-transform: uppercase;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 80px;
+    height: 4px;
+    background-color: color.$main-color;
+}
+
+// HEADER
+// NAVIGATION
+.navbar {
+    width: 100%;
+    z-index: 5;
+    transition: background-color .3s;
+    // border: 2px solid red;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    color: color.$white;
+}
+
+.fa-bars {
+    color: color.$white;
+}
+
+.navbar-nav {
+    .nav-link {
+        text-transform: uppercase;
+        color: color.$white;
+    }
+    .nav-link:focus,
+    .nav-link:hover,
+    .nav-link.active {
+        color: color.$main-color;
+    }
+}
+
+.navbar-toggler {
+    padding: 10px 15px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+// LOGO
+.navbar-brand {
+    width: 110px;
+    height: 100px;
+    align-items: center;
+    .logo-img {
+        width: 110px;
+        height: 100px;
+    }
+}
+
+// HERO IMG
+.hero-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: color.$white;
+    background-image: url('../assets/img/main-lamborgini640.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; // zdjęcie niby jest przyklejone na stronie. Na ois nie zawsze działa
+    z-index: 0;
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; //tekst wyśrodkowaał się na swoj a wysokość
+                             // trzeba dać ćwysokośc 100% swojego rodzica
+        height: 100%;
+    }
+    .hero-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.7); // cień
+        z-index: -1;
+    }
+}
+
+.fa-chevron-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); // wyśrodkowanie
+    bottom: 20px;
+    font-size: 30px;
+    color: color.$white;
+}
+
+.btn-outline-light {
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+
+// MAIN 
+.about-us-card-title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.about-us-card-text,
+.services-card-text {
+    font-size: 14px;
+}
+
+.about-us-hover,
+.services-hover {
+    transition: 0.5s;
+}
+
+.about-us-hover:hover,
+.services-hover:hover {
+    color: color.$main-color;
+}
+
+i {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+// section ABOUT US
+.section-about-us {
+    color: color.$gray;
+    // border: 1px solid red;
+}
+
+
+// section SERVICES
+.section-services {
+    position: relative;
+    color: color.$white;
+    background-image: url('../assets/img/car-broken640.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    // border: 2px solid red;
+    .services-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // height: auto;
+        background-color: rgb(0, 0, 0, 0.6); // cień
+        z-index: -1;
+    }
+}
+
+.services-row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-card-title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+i {
+    font-size: 36px;
+}
+
+.services-card-text {
+    height: 70px;
+    // border: 2px solid blue;
+}
+
+
+// section PORTFOLIO
+.section-portfolio {
+    color: color.$gray;
+    // border: 2px solid blue;
+    .carousel-item {
+        height: 600px;
+    }
+    .carousel-caption {
+        left: 0;
+        right: 0;  // position jest absolute
+        padding: 40px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .carousel-indicators {
+        padding: 20px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+// section PRICES
+.section-prices {
+    color: color.$gray;
+}
+
+.price-wrap {
+    justify-content: center;
+    .price-box {
+        margin: 20px;
+        padding: 30px;
+        background: color.$white;
+        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.4);
+        transition: transform 0.3s;
+        // cursor: pointer;
+        // border: 2px solid blue;
+        .price-title {
+            color: color.$main-color;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    .price-box:hover {
+        transform: scale(1.05);
+    }
+    .price-info {
+        margin-top: 30px;
+        a {
+            text-decoration: none;
+        }
+    }
+
+}
+
+// section TEAM
+.section-team {
+    position: relative;
+    color: color.$white;
+    background-image: url('../assets/img/macro-wheel_640.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    .team-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // height: auto;
+        background-color: rgb(0, 0, 0, 0.8); // cień
+        background-attachment: fixed;
+        z-index: -1;
+    }
+}
+
+.team-wrap {
+    justify-content: center;
+}
+
+.team-cards {
+    width: 280px;
+}
+
+.team-box {
+    transition: transform 0.3s;
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+    }
+    .card-body {
+        margin-bottom: 20px;
+        height: 190px;
+        .card-title {
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        }
+    }
+}
+
+.card-team:hover {
+    transform: scale(1.05);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fab {
+    font-size: 20px;
+} 
+
+
+// section
+.section-achievements {
+    background-color: color.$light-gray;
+    color: color.$gray;
+}
+
+.achievements-wrap {
+    padding: 20px 0;
+    i {
+        margin-bottom: 20px;
+        font-size: 48px;
+        text-shadow: 0 0 5px #000;
+    }
+    .achievement-number {
+        font-style: 22px;
+    }
+    .achievement-text {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+
+
+// section CONTACT
+.footer {
+    position: relative;
+    background-image: url('../assets/img/city/warsaw-640.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    color: color.$bg-color;
+    z-index: 0;
+    .footer-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background-color: rgb(0, 0, 0, 0.7);
+        background-color: rgb(0, 9, 27, 0.7);
+        background-attachment: fixed;
+        z-index: -1;
+
+    }
+    i {
+        color: color.$bg-color;
+        padding-top: 5px;
+        margin: 0;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        // text-shadow: 0 0 5px #000;
+        // border: 2px solid red;
+    }
+    .contact-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .contacts-content {
+            display: flex;
+            flex-direction: column;
+            color: color.$bg-color;
+            // border: 2px solid red;
+            .contact-subtitle {
+                margin: 0 auto;
+                font-size: 18px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                text-transform: uppercase;
+                // border: 2px solid red;
+            }
+            .location-box {
+                width: 280px;
+                // border: 2px solid green;
+                .location-item {
+                    display: flex;
+                    .map {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        color: color.$bg-color;
+                        // color: color.$white;
+                        list-style: none;
+                        text-decoration: none;
+                        gap: 20px;
+                        transition: color 0.5s;
+                    }
+                    .map:hover {
+                        color: color.$main-color;
+                    }
+                    .location-title {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .contacts-box {
+                width: 280px;
+                // border: 2px solid green;
+                .contacts-item {
+                    display: flex;
+                    .email,
+                    .phone {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 20px;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        transition: color 0.5s;
+                    }
+                    .email:hover,
+                    .phone:hover {
+                        color: color.$main-color;
+                    }
+                    .email-title,
+                    .phone-title {
+                        margin-bottom: 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .info-content {
+            display: flex;
+            flex-direction: column;
+            color: color.$bg-color;
+            // border: 2px solid red;
+            .info-subtitle {
+                margin: 0 auto;
+                font-size: 18px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                text-transform: uppercase;
+                // border: 2px solid red;
+            }
+            .info-box {
+                width: 220px;
+                padding-top: 5px;
+                .info-item {
+                    display: flex;
+                    // align-self: center;
+                    .info-container {
+                        margin: 0 auto;
+                        padding-left: 10px;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        transition: color 0.5s;
+                        .info-name {
+                            margin: 0;
+                        }
+                    }
+                    .info-container:hover {
+                        color: color.$main-color;
+                    }
+                }
+            }
+        }
+        .social-content {
+            display: flex;
+            flex-direction: column;
+            color: color.$bg-color;
+            // border: 2px solid red;
+            .social-box {
+                padding-top: 10px;
+                width: 280px;
+                .social-item {
+                    // border: 2px solid red;
+                    .social-container {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+                        color: color.$bg-color;
+                        list-style: none;
+                        text-decoration: none;
+                        transition: color 0.5s;
+                        i {
+                            margin-bottom: 0;
+                            font-size: 16px;
+                        }
+                        .social-name {
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                    }
+                    .social-container:hover {
+                        color: color.$main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+    // HEADER
+    .hero-img {
+        background-image: url('../assets/img/main-lamborgini1920.jpg');
+    }
+
+    // TEAM
+    .team-cards {
+        width: 220px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .section-services {
+        background-image: url('../assets/img/car-broken1920.jpg');
+    }
+}
+
+@media (min-width: 576px) {
+    .container-team {
+        min-width: 570px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-box .card-img-top {
+            height: 200px;
+    }
+}
